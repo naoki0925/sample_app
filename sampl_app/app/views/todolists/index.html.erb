@@ -2,9 +2,9 @@
 <% @list.each do |list| %>
  <p>タイトル</p>
  <span>
-  <%= link_to list.title, todolists_path(list.id) %>
+  <%= link_to list.title, todolist_path(list.id) %>
  </span>
  <p>画像</p>
- <%= attachment_image_tag list, :fill, 100, 100, format: 'jpeg' %>
-
+ <%= attachment_image_tag list, :image, :fill, 100, 100, format: 'jpeg' %>
+ 
  <% end %>
